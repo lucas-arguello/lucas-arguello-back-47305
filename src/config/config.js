@@ -20,8 +20,7 @@ export const config = {
     },
 
     mongo: {
-        url: process.env.MONGO_URL,
-        url_test: process.env.MONGO_URL_TEST
+        url: process.env.MONGO_URL
     },
 
     tokenJWT: {
@@ -41,7 +40,7 @@ export const config = {
     },
     
     enviroment: {
-        persistence: process.env.ENV,
+        persistence: persistenceMode,
     },
 
 }

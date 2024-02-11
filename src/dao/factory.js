@@ -12,7 +12,7 @@ let ticketDao;
 const enviroment = config.enviroment.persistence;
 
 switch (enviroment) {
-  case "development": {
+  case "production": {
     //Mongo DB
     const { connectDB } = await import("../config/dbConection.js");
     connectDB.getInstance();
@@ -51,12 +51,8 @@ switch (enviroment) {
     break;
   }
   //
-  case "production": {
-    
-    const { connectDB } = await import("../config/dbConnection.js");
-    connectDB.getInstance();
-
-    //Products
+  case "development": {
+      //Products
     const { ProductManagerFs } = await import(
       "./managers/fileSystemManagers/productsManagerFs.js"
     );

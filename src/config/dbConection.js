@@ -9,7 +9,7 @@ export class connectDB {
 
     const URL = config.mongo.url;
     const connection = mongoose.connect(URL);
-    logger.info("Conectado a la base de datos");
+    console.log("Conectado a la base de datos");
     return connection;
   }
 
