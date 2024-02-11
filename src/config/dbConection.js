@@ -7,15 +7,7 @@ export class connectDB {
 
   static #getConnection() {
 
-    let URL;
-
-    if(config.enviroment.persistence === 'test'){
-        URL = config.mongo.url_test;
-    }else{
-        URL = config.mongo.url;
-    }
-
-    // const URL = config.mongo.url;
+    const URL = config.mongo.url;
     const connection = mongoose.connect(URL);
     logger.info("Conectado a la base de datos");
     return connection;
